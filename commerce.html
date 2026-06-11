@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Legal Blossom · Human Rights, Constitution & Business Law</title>
+  <meta name="description" content="Explore books and insights on governance, human rights, constitutional law, and business regulations. Legal Blossom – free legal knowledge hub.">
+  <!-- Content Security Policy (CSP) - blocks malicious scripts -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com;">
+  <!-- Google Fonts + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google tag (gtag.js) with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85PZK89KQD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-85PZK89KQD', {
+      'stream_id': '15047824303',
+      'stream_name': 'abdihope-legal-blossom'
+    });
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      transition: background 0.3s, color 0.3s;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --bg: #0a0a1f;
+      --surface: #11132b;
+      --text: #f0f0ff;
+      --text-muted: #b0b0dd;
+      --primary: #7c3aed;
+      --primary-light: #a78bfa;
+      --secondary: #3b82f6;
+      --accent: #ec4899;
+      --card-bg: rgba(18, 20, 40, 0.7);
+      --border: rgba(124, 58, 237, 0.3);
+      --shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.5);
+      --toast-bg: #1e293b;
+    }
+
+    body.light {
+      --bg: #f9f9ff;
+      --surface: #ffffff;
+      --text: #111122;
+      --text-muted: #334155;
+      --primary: #5b21b6;
+      --primary-light: #7c3aed;
+      --card-bg: #ffffff;
+      --border: #cbd5e1;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      --toast-bg: #2d3a5e;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background: radial-gradient(circle at 10% 20%, rgba(59,130,246,0.15) 0%, rgba(124,58,237,0.1) 80%);
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .logo i {
+      background: none;
+      color: var(--primary);
+      margin-right: 0.3rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-light);
+    }
+
+    .theme-toggle {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 3rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-size: 1.1rem;
+      color: var(--text);
+      transition: 0.2s;
+    }
+
+    .hero {
+      padding: 4rem 0 3rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      background: linear-gradient(to right, #a78bfa, #3b82f6);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .book-float {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .floating-book {
+      font-size: 3rem;
+      background: var(--surface);
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      animation: float 3s ease-in-out infinite;
+      transition: transform 0.2s;
+      border: 1px solid var(--border);
+    }
+
+    .floating-book:nth-child(2) { animation-delay: 0.5s; }
+    .floating-book:nth-child(3) { animation-delay: 1s; }
+    .floating-book:hover { transform: scale(1.05); }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .filter-section {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0 2rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--text);
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .blog-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(2px);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      box-shadow: var(--shadow);
+      animation: fadeInUp 0.6s ease backwards;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--primary-light);
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-img {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      background-color: rgba(124, 58, 237, 0.2);
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .category {
+      display: inline-block;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      background: var(--primary);
+      color: white;
+    }
+
+    .blog-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-card p {
+      color: var(--text-muted);
+      line-height: 1.4;
+      margin: 0.8rem 0;
+    }
+
+    .read-more {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      transition: gap 0.2s;
+      cursor: pointer;
+    }
+
+    .read-more:hover {
+      gap: 0.8rem;
+      color: var(--secondary);
+    }
+
+    .contact {
+      background: var(--surface);
+      border-radius: 2rem;
+      padding: 2rem;
+      margin: 4rem 0;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact form {
+      max-width: 500px;
+      margin: 1.5rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact input, .contact textarea {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 0.8rem 1.2rem;
+      color: var(--text);
+      font-family: inherit;
+    }
+
+    .contact button {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border: none;
+      padding: 0.8rem;
+      border-radius: 2rem;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      margin-top: 2rem;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(5px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content {
+      background: var(--surface);
+      max-width: 600px;
+      width: 90%;
+      border-radius: 2rem;
+      padding: 2rem;
+      border: 1px solid var(--primary);
+      box-shadow: var(--shadow);
+      animation: fadeInUp 0.3s;
+      position: relative;
+    }
+    .modal-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .modal-content p {
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 1rem 0;
+      white-space: pre-wrap;
+    }
+    .close-modal {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--toast-bg);
+      backdrop-filter: blur(8px);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      z-index: 1100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: opacity 0.3s;
+      opacity: 0;
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .navbar { flex-direction: column; }
+      .nav-links { flex-wrap: wrap; justify-content: center; }
+      .toast { bottom: 1rem; right: 1rem; left: 1rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+<div class="animated-bg"></div>
+<div class="container">
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fas fa-leaf"></i> Legal Blossom
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#blog-posts">Library</a>
+      <a href="#contact">Connect</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Light/Dark mode">
+        <i class="fas fa-moon"></i> <span id="themeText">Dark</span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Abdihope Legal Blossom</h1>
+    <p>Essential books & analysis on Human Rights, Constitutional Governance, and Business Law — curated for justice seekers.</p>
+    <div class="book-float">
+      <div class="floating-book"><i class="fas fa-balance-scale"></i></div>
+      <div class="floating-book"><i class="fas fa-book-open"></i></div>
+      <div class="floating-book"><i class="fas fa-landmark"></i></div>
+    </div>
+  </section>
+
+  <div class="filter-section" id="filterSection">
+    <button class="filter-btn active" data-filter="all">All Categories</button>
+    <button class="filter-btn" data-filter="human-rights">⚖️ Human Rights</button>
+    <button class="filter-btn" data-filter="constitution">📜 Constitution</button>
+    <button class="filter-btn" data-filter="business">🏢 Business Law</button>
+  </div>
+
+  <div class="blog-grid" id="blogGrid"></div>
+
+  <div id="contact" class="contact">
+    <h2><i class="fas fa-envelope"></i> Subscribe to Legal Blossom</h2>
+    <p>Receive free digests on landmark judgments and legal books.</p>
+    <form id="contactForm">
+      <input type="text" id="nameInput" placeholder="Your name" required>
+      <input type="email" id="emailInput" placeholder="Email address" required>
+      <textarea id="msgInput" rows="3" placeholder="Tell me which law topic interests you..."></textarea>
+      <button type="submit">Send message <i class="fas fa-paper-plane"></i></button>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2025 Abdihope Legal Blossom — <a href="https://www.Legal-Blossom.com" style="color: var(--primary-light);">www.Legal-Blossom.com</a> | Free knowledge for all</p>
+    <p>Stream: abdihope-legal-blossom (ID: 15047824303) • <i class="fas fa-chart-line"></i> Analytics with Google tag G-85PZK89KQD</p>
+  </footer>
+</div>
+
+<div id="postModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalBody"></p>
+  </div>
+</div>
+
+<div id="toastMsg" class="toast"></div>
+
+<script>
+  const posts = [
+    {
+      title: "Universal Declaration of Human Rights (UDHR)",
+      excerpt: "The bedrock of international human rights law. 30 articles that changed the world.",
+      category: "human-rights",
+      icon: "fas fa-hand-holding-heart",
+      fullContent: "Adopted by the UN General Assembly in 1948, the UDHR proclaims inalienable rights for every human being. From right to life, freedom from slavery, to education and fair trial — this document has inspired constitutions worldwide. Legal Blossom explores each article with landmark cases."
+    },
+    {
+      title: "The Constitution as a Living Tree",
+      excerpt: "How constitutional interpretation adapts to modern challenges — federalism, rights, and governance.",
+      category: "constitution",
+      icon: "fas fa-scroll",
+      fullContent: "Constitutions are not static. This deep dive covers the 'living tree' doctrine, basic structure, judicial review, and comparative analysis of the US, Indian, and South African constitutions. Learn how courts breathe life into fundamental rights."
+    },
+    {
+      title: "Business Law: Contracts & Corporate Ethics",
+      excerpt: "Essential principles for startups, compliance, and fair trade in global markets.",
+      category: "business",
+      icon: "fas fa-chart-line",
+      fullContent: "Master the core of business law: contract formation, breach remedies, corporate governance, and anti-corruption regulations (FCPA, UK Bribery Act). Includes real case studies on shareholder rights and liability."
+    },
+    {
+      title: "Human Rights in the Digital Frontier",
+      excerpt: "Privacy, surveillance, and algorithmic justice — new rights for the internet age.",
+      category: "human-rights",
+      icon: "fas fa-shield-alt",
+      fullContent: "As governments use AI and mass data collection, human rights face unprecedented challenges. This article discusses GDPR, right to be forgotten, encryption, and the UN's roadmap for digital human rights."
+    },
+    {
+      title: "Federalism & Separation of Powers",
+      excerpt: "Classic and modern theories of dividing power between central and regional governments.",
+      category: "constitution",
+      icon: "fas fa-building-columns",
+      fullContent: "From Montesquieu to contemporary federal disputes (e.g., Germany, Canada, India), we analyze how constitutions allocate legislative, executive, and judicial powers. Also covers emergency provisions and intergovernmental relations."
+    },
+    {
+      title: "Mergers & Antitrust Law",
+      excerpt: "How competition law prevents monopolies and protects consumers.",
+      category: "business",
+      icon: "fas fa-handshake",
+      fullContent: "Explore the Sherman Act, Clayton Act, EU competition rules, and landmark cases like Microsoft and Google. Learn about merger control, predatory pricing, and the role of antitrust authorities in modern markets."
+    },
+    // NEW ETHIOPIAN COMMERCIAL LAW POST - FULL TEXT BELOW
+    {
+      title: "LAW of TRADER & BUSINESS ORGANIZATIONS – Commercial Law (Ethiopia)",
+      excerpt: "Complete short notes on Ethiopian commercial law: traders, business organizations, shareholder meetings, bankruptcy, and consumer protection.",
+      category: "business",
+      icon: "fas fa-gavel",
+      fullContent: `LAW of TRADER & BUSINESS ORGANIZATIONS SHORT NOTE: COMMERCIAL LAW (ETHIOPIA)
+
+________________________________________
+
+PART ONE: GENERAL INTRODUCTION & TRADERS
+
+1. Historical Evolution of Business Organizations in Ethiopia
+
+Period	Development
+1894	Franco-Ethiopian Railway Company – first business organization (French company, imperial concession)
+1905	Bank of Abyssinia (branch of National Bank of Egypt)
+1931	Bank of Ethiopia (government purchased Bank of Abyssinia)
+1933	First Ethiopian Company Law (provided for share companies, joint stock, private limited, partnerships)
+1960	Modern Commercial Code enacted
+
+2. Civil vs. Commercial Law Dichotomy
+
+• Continental system divides private law into civil law and commercial law
+• Ethiopia maintains both codes but no scientific criteria to precisely demarcate
+• Cross-references between codes reduce distinctness
+• Classification: Commercial business organizations vs. Civil business organizations – both regulated by Commercial Code in Ethiopia (unlike other countries)
+
+3. Definition of Trader (Art. 4, 5, 107 – FDRE Commercial Code)
+
+Literal meaning: Natural person who operates a sole business (individual business). Artificial persons cannot operate sole proprietorship.
+
+Two conditions for "trader" status:
+
+Condition	Requirements
+General (Art. 4)	(1) Operates a business (as owner, lessee, or usufructuary); (2) Professional nature (principal means of livelihood); (3) Profit motive (economic gain, not charity)
+Special (Art. 5)	Business object relates to activities listed as acts of commerce (trading activities)
+
+Theories of commercial law:
+- Subjective: Status of the person (trader)
+- Objective: List of acts of commerce
+- Ethiopia adopts mixed approach
+
+Excluded transactions (Arts. 6-9): Activities not considered commercial even if done by a trader.
+
+4. Rights and Duties of Traders
+
+Rights (Art. 21): Right to engage in trading activity of choice (subject to prohibitions/incompatibilities). Married traders may act individually but spouse may oppose.
+
+Duties:
+- Commercial Registration (Arts. 78, 82-105): Without registration → no legal personality. Cancellation required upon sale, cessation, or death (Art. 434 Criminal Code for false registration)
+- Maintaining Books & Accounts (Arts. 68, 69, 128; Crim. Code 863): Journals, inventories, balance sheets. Books are evidence – testify against the trader
+- Prohibitions & Incompatibilities (Arts. 10, 15, 22, 25, 113-115; Crim. Code 719): Anti-competitive agreements prohibited. Minors cannot trade; foreign nationals cannot operate banking/insurance; associations cannot carry on trade
+- Tax obligations
+
+5. Concept of Business (Arts. 106-115)
+
+Definition (Art. 106): Business is an incorporeal movable consisting of all movable properties brought together and organized for carrying out economic activities.
+
+Elements of business:
+- Corporeal Movables: Equipment, goods, raw materials, stock
+- Incorporeal Movables: Goodwill, trade-name, special designation, lease rights, intellectual property, non-competition clause (5 years)
+
+Compare Art. 106 vs. Art. 110: Art. 110 provides exceptions – certain assets may be excluded by agreement.
+
+________________________________________
+
+PART TWO: CONSUMER PROTECTION & TRADE COMPETITION
+
+1. Historical Development of Competition Policy
+- State of nature: No government, no law
+- Laissez-faire: Self-interest, market rules, no government intervention
+- Welfare economics: Collective interests, government intervention
+- Neoliberalism: Competition + intervention
+
+2. Legal Framework: Trade Competition and Consumer Protection Proclamation No. 813/2013
+
+Aims: (1) Secure fair competition by preventing anti-competitive and unfair trade practices; (2) Safeguard consumer interests by eliminating restraints on efficient supply and distribution.
+
+3. Institutional Framework: Trade Competition and Consumer Protection Authority (TCCPA)
+
+Powers (Art. 30): Protect consumers from unfair practices; ban unsafe advertising; announce banned products; conduct research; investigate complaints (Art. 36); compel information (Art. 38); enter and search premises; appoint experts; impose administrative penalties.
+
+Appellate Tribunal (Arts. 33, 39): Hears appeals from TCCPA decisions; final decision.
+
+4. PROHIBITED PRACTICES UNDER PROCLAMATION NO. 813/2013
+
+Two main categories:
+
+Category 1 – Anti-competitive practices (Arts. 5-8): Restricting or distorting competition
+- Restrictive Business Agreements (Art. 5-6): Horizontal (price fixing, bid rigging, market allocation) and vertical (resale price maintenance, exclusive dealing)
+- Abuse of Dominant Position (Art. 7): Excessive pricing, predatory pricing, refusal to deal, tie-in sales
+- Unfair Competition (Art. 8): False information, misleading advertising, trademark infringement, misappropriation of confidential information
+
+Category 2 – Non-competitive behaviour (Arts. 14-22): Failure to indicate prices, improper labeling, no receipts, etc.
+
+5. Emerging Issues in Consumer Protection: Digital challenges, OTT services, online profiling, virtual currencies, trustmarks, comparison websites.
+
+________________________________________
+
+PART THREE: BUSINESS ORGANIZATIONS – GENERAL
+
+1. Why Business Organizations?
+- Raise huge capital
+- Share losses
+- Limited liability veil
+
+2. Definition of Business Organization (Art. 172): Association arising out of a memorandum of association (agreement whereby two or more persons undertake to bring together contributions for carrying out economic activities and participating in profits/losses).
+
+Key elements: Association of persons or capital; cooperation; contributions; profit & loss sharing; economic nature.
+
+3. Types of Business Organizations in Ethiopia:
+- General Partnership (Art. 183) – unlimited liability
+- Limited Partnership (Art. 212) – general + limited partners
+- Limited Liability Partnership (Art. 221) – professional services
+- Joint Venture (Art. 234) – no legal personality
+- Private Limited Company (Art. 495) – 2-50 members
+- One Member Private Limited (Art. 534) – single person
+- Share Company (Art. 245) – minimum 5 members
+
+________________________________________
+
+PART FOUR: PARTNERSHIPS (GENERAL & LIMITED)
+
+1. General Partnership (Art. 183): All partners manage; unlimited joint & several liability; transfer of share requires all partners' consent; dissolution by death, bankruptcy, notice.
+
+2. Limited Partnership (Art. 212): General partners (manage, unlimited liability) + limited partners (cannot manage, liability limited to contribution).
+
+3. Limited Liability Partnership (Art. 221): Formed to render professional service; all partners have limited liability; all can manage.
+
+4. Joint Venture (Art. 234-242): Secret partnership – no registration, no legal personality; if disclosed to third parties → deemed de facto general partnership.
+
+5. Rights and Duties of Partners: Duty of diligence, good faith, account, non-compete; right to share profits, inspect books, indemnity.
+
+________________________________________
+
+PART FIVE: SHAREHOLDER MEETINGS – MAIN BUSINESS (CRITICAL FOR EXIT EXAM)
+
+1. Classification of Shareholder Meetings (Art. 362):
+- Ordinary General Meeting (OGM) – annual routine business
+- Extraordinary General Meeting (EGM) – fundamental changes
+- Special Meeting – class rights modifications
+
+2. Ordinary General Meeting (OGM) – Arts. 392-398
+- When: Once every year, within six months after close of financial year
+- Notice: 24 days
+- Quorum: 50% of share capital (unless MoA otherwise)
+- Main business: approve management report, annual accounts, allocate profits, appoint auditors, elect directors, approve remuneration, discharge directors
+
+3. Extraordinary General Meeting (EGM) – Arts. 399-403
+- When: Fundamental changes (amend MoA, change capital, merge, divide, dissolve, convert, issue debentures)
+- Voting: Special resolution – 75% of share capital present and voting
+- Notice: 24 days
+
+4. Special Meeting (Art. 404)
+- When: Modification of class rights
+- Who: Only shareholders of affected class
+- Must be held within 60 days of EGM decision
+
+5. Additional Rules: Proxy voting permitted (Art. 373); minutes must be kept (Art. 389); shareholders with 10% capital can request meeting.
+
+________________________________________
+
+PART SIX: SHARE COMPANY (ARTS. 245-424)
+
+Definition (Art. 245): Company whose capital is fixed in advance and divided into shares; limited liability; perpetual succession; transferable shares; representative management.
+
+Minimum capital: 50,000 Birr (Art. 247)
+Minimum members: 5 (Art. 252)
+
+Theories of legal personality: Ethiopia adopts Fiction Theory.
+
+Formation stages: Promotion → Registration → Certificate of incorporation → Prospectus → Minimum subscription → Allotment → Certificate of commencement.
+
+Types of shares: Preference shares (fixed dividend, priority) vs Equity shares (variable dividend, voting rights).
+
+Debentures (Arts. 407-424): Unsecured debt instruments; types: registered/bearer, redeemable/irredeemable, convertible/nonconvertible.
+
+________________________________________
+
+PART SEVEN: GOVERNANCE OF SHARE COMPANY (ARTS. 296-404)
+
+Ethiopia adopts German two-tier model:
+- Management board (executive directors) – day-to-day management
+- Supervisory board (optional, Art. 331) – advisory, elected from shareholders
+
+Board composition (Art. 296): Minimum 3, maximum 13 members; non-shareholder directors max ⅓; chairperson must be shareholder.
+
+Director duties: loyalty, care, independent judgment, non-compete, disclose conflicts.
+
+Director liabilities: Joint and several for breach; also liable to creditors for reduction of capital, unlawful dividends.
+
+________________________________________
+
+PART EIGHT: PRIVATE LIMITED COMPANY (ARTS. 495-532)
+
+Nature: Limited number of members (2-50); shares not publicly traded; name must include "Private Limited" or "Ltd."; minimum capital 15,000 Birr; share nominal value not less than 100 Birr.
+
+Restrictions: Cannot invite public subscription; cannot engage in banking, insurance, or similar activities (Art. 495(3)).
+
+Share transfer: Pre-emption clause (Art. 508) – members have first right; transfer to outsiders requires approval of members representing ¾ of capital (Art. 509).
+
+Management: Board optional; manager mandatory.
+
+One Member Private Limited Company (Arts. 534-549): Single natural person; minimum capital 15,000 Birr; cannot establish another OMPLC; can be converted to partnership.
+
+________________________________________
+
+PART NINE: BANKRUPTCY LAW (ARTS. 878-1000)
+
+State of bankruptcy (Art. 878(2)): Debtor generally unable to pay matured debts and condition not temporary.
+
+Purpose (Art. 880): Collective and orderly satisfaction of creditors' claims; debtor rehabilitation.
+
+Triggers: Debtor files (voluntary) or creditor files (involuntary – must prove state of bankruptcy).
+
+Effects of bankruptcy judgment (Art. 892, 894):
+- Debtor loses control of estate
+- All assets consolidated into bankruptcy estate
+- Court-appointed Administrator manages estate
+- Automatic stay on individual creditor actions
+- Relation-back (Art. 890): Effects retroact to beginning of day petition was filed
+
+Distribution order (Arts. 960-978):
+1. Secured creditors (from proceeds of collateral)
+2. Costs and expenses of administration
+3. Employee claims (unpaid wages – privileged)
+4. Other preferential claims (taxes, social security)
+5. Ordinary unsecured creditors (pro rata)
+6. Subordinated creditors
+7. Shareholders (residual)
+
+Scheme of arrangement (Arts. 979-995): Preventive restructuring (Art. 979) – can be filed before bankruptcy petition. Rehabilitation plan (Art. 980) – after bankruptcy judgment. Approval requires creditors representing more than half in number and two-thirds in value.
+
+Cross-border bankruptcy: No specific provisions in FDRE Commercial Code; purely territorial approach. Recommended reform: Adopt UNCITRAL Model Law.
+
+________________________________________
+
+PART TEN: Brainstorming FOCUS POINTS
+
+Short Answer / Fill-in-Blanks Topics:
+1. First business organization in Ethiopia: Franco-Ethiopian Railway Company (1894)
+2. Definition of trader (Art. 4, 5): Natural person operating sole business with general + special conditions
+3. Elements of business (Art. 106): Incorporeal movable – goodwill, trade-name, etc.
+4. Minimum capital: Share company – 50,000 Birr; Private limited / OMPLC – 15,000 Birr
+5. Minimum members: Share company – 5; Private limited – 2; OMPLC – 1
+6. Maximum members: Private limited – 50; Share company – no limit
+7. German model features in Ethiopia: Two-tier board (management + optional supervisory)
+8. Prohibited for private limited companies: Banking, insurance, inviting public subscription
+9. Pre-emption clause: Members' right to first refusal on share transfers
+10. Preventive restructuring (Art. 979): Filed before bankruptcy – new rescue tool
+11. Relation-back principle (Art. 890): Effects of bankruptcy retroact to petition filing date
+12. Par condicio creditorum: Equal treatment of unsecured creditors
+13. Unfair competition (Art. 8): False information, misleading advertising, trademark infringement
+14. TCCPA powers (Art. 30): Investigate, search premises, impose penalties
+15. Joint venture disclosure rule (Art. 235): If disclosed to third parties → deemed general partnership
+
+Meeting-Specific Questions (Critical for Exit Exam):
+16. OGM business (Art. 394): 7 items – accounts, dividend, directors, auditors, remuneration, discharge, other
+17. EGM business (Art. 399): 8 items – MoA amendment, capital change, merger, division, dissolution, conversion, debentures, nationality
+18. Special meeting (Art. 404): Class rights modification – must be approved within 60 days of EGM decision
+19. Quorum for OGM (Art. 375): 50% of share capital (unless MoA provides otherwise)
+20. Voting threshold for EGM (Art. 401): 75% of share capital present and voting (special resolution)
+21. Notice period (Art. 370): 24 days for both OGM and EGM
+22. Proxy voting (Art. 373): Permitted; shareholder cannot vote personally if proxy appointed
+
+Distinction Questions (Compare & Contrast):
+• General partnership vs. Limited partnership
+• Share company vs. Private limited company
+• Preference shares vs. Equity shares
+• Convertible vs. Nonconvertible debentures
+• OGM vs. EGM vs. Special meeting (KNOW THIS FOR EXAM)
+• Preventive restructuring vs. Rehabilitation plan
+
+Important Articles to Memorize:
+Article 4,5 (trader), 106 (business), 172 (business organization), 183 (general partnership), 212 (limited partnership), 221 (LLP), 234 (joint venture), 245 (share company), 296 (board composition), 331 (supervisory board), 362-404 (meetings), 392-398 (OGM), 399-403 (EGM), 404 (special meeting), 495 (private limited), 534 (OMPLC), 878 (bankruptcy), 979 (preventive restructuring).
+
+This document is a complete short note for Ethiopian Commercial Law examination preparation.`
+    }
+  ];
+
+  function renderBlog(filter = "all") {
+    const grid = document.getElementById("blogGrid");
+    const filtered = filter === "all" ? posts : posts.filter(p => p.category === filter);
+    grid.innerHTML = "";
+    if (filtered.length === 0) {
+      grid.innerHTML = `<div style="text-align:center; grid-column:1/-1;">📖 No posts in this category yet. Explore others.</div>`;
+      return;
+    }
+    filtered.forEach((post, idx) => {
+      const card = document.createElement("div");
+      card.className = "blog-card";
+      card.style.animationDelay = `${idx * 0.05}s`;
+      let catDisplay = post.category === "human-rights" ? "Human Rights" : (post.category === "constitution" ? "Constitution" : "Business Law");
+      card.innerHTML = `
+        <div class="card-img"><i class="${post.icon}" style="font-size: 3rem; color: var(--primary-light);"></i></div>
+        <div class="card-content">
+          <span class="category">${catDisplay}</span>
+          <h3>${post.title}</h3>
+          <p>${post.excerpt}</p>
+          <div class="read-more" data-title="${post.title.replace(/"/g, '&quot;')}" data-content="${post.fullContent.replace(/"/g, '&quot;').replace(/\n/g, '\\n')}">
+            Read full analysis <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+    document.querySelectorAll('.read-more').forEach(el => {
+      el.addEventListener('click', (e) => {
+        const title = el.getAttribute('data-title');
+        let content = el.getAttribute('data-content');
+        // Restore newlines for display
+        content = content.replace(/\\n/g, '\n');
+        showModal(title, content);
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'read_article', { 'article_title': title });
+        }
+      });
+    });
+  }
+
+  const modal = document.getElementById('postModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalBody = document.getElementById('modalBody');
+  function showModal(title, content) {
+    modalTitle.innerText = title;
+    modalBody.innerText = content;
+    modal.style.display = 'flex';
+  }
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+  document.querySelector('.close-modal').addEventListener('click', closeModal);
+  window.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+  function showToast(message, duration = 3000) {
+    const toast = document.getElementById('toastMsg');
+    toast.innerText = message;
+    toast.style.opacity = '1';
+    setTimeout(() => { toast.style.opacity = '0'; }, duration);
+  }
+
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('nameInput').value.trim();
+    const email = document.getElementById('emailInput').value.trim();
+    if (!name || !email) {
+      showToast("Please enter your name and email address.", 2500);
+      return;
+    }
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'contact_form_submit', { 'form_location': 'footer_subscribe', 'user_email_domain': email.split('@')[1] || 'unknown' });
+    }
+    showToast(`Thank you ${name}! Your message has been received. We'll respond soon.`, 4000);
+    contactForm.reset();
+  });
+
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderBlog(btn.getAttribute('data-filter'));
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'filter_category', { 'filter': btn.getAttribute('data-filter') });
+      }
+    });
+  });
+
+  const toggleBtn = document.getElementById('themeToggle');
+  const themeTextSpan = document.getElementById('themeText');
+  const storedTheme = localStorage.getItem('theme') || 'dark';
+  if (storedTheme === 'light') {
+    document.body.classList.add('light');
+    themeTextSpan.innerText = 'Light';
+    toggleBtn.innerHTML = '<i class="fas fa-sun"></i> Light';
+  } else {
+    document.body.classList.remove('light');
+    themeTextSpan.innerText = 'Dark';
+    toggleBtn.innerHTML = '<i class="fas fa-moon"></i> Dark';
+  }
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light');
+    const isLight = document.body.classList.contains('light');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    if (isLight) {
+      toggleBtn.innerHTML = '<i class="fas fa-sun"></i> Light';
+      themeTextSpan.innerText = 'Light';
+    } else {
+      toggleBtn.innerHTML = '<i class="fas fa-moon"></i> Dark';
+      themeTextSpan.innerText = 'Dark';
+    }
+    if (typeof gtag !== 'undefined') gtag('event', 'theme_switch', { 'theme': isLight ? 'light' : 'dark' });
+  });
+
+  renderBlog('all');
+  console.log("✅ Legal Blossom live — CSP active + HTTPS via Netlify");
+</script>
+</body>
+</html>
